@@ -18,8 +18,8 @@ public class Lion {
         this.feline = feline;
     }
 
-    public int getKittens(int kittensCount) {
-        return feline.getKittens(kittensCount);
+    public int getKittens() {
+        return feline.getKittens();
     }
 
     public boolean doesHaveMane() {

@@ -7,7 +7,15 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class GetFoodTest {
+public class CatClassTest {
+    @Test
+    public void getSoundCatPositive() {
+        Feline feline = new Feline();
+        Cat cat = new Cat(feline);
+        String actual = cat.getSound();
+        String expected = "Мяу";
+        assertEquals(expected, actual);
+    }
     @Test
     public void shouldReturnTypeFoodCat() throws Exception {
         Feline feline = new Feline();
@@ -16,5 +24,4 @@ public class GetFoodTest {
         List<String> expected = Arrays.asList("Животные", "Птицы", "Рыба");
         assertEquals(expected, actual);
     }
-
 }

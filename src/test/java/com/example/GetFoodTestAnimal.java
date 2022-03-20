@@ -16,6 +16,18 @@ public class GetFoodTestAnimal {
         assertEquals(expected, actual);
     }
     @Test
+    public void shouldReturnTypeFoodAnimalUncorrect() throws Exception {
+        Animal animal = new Animal();
+        try {
+            String animalKind = "Хомяк";
+            List<String> actual = animal.getFood(animalKind);
+        }
+        catch (Exception exception) {
+            assertEquals( "Неизвестный вид животного, используйте значение Травоядное или Хищник", exception.getMessage());
+        }
+
+    }
+    @Test
     public void getFamilyAnimalCorrect() {
         Animal animal = new Animal();
         String actual = animal.getFamily();
