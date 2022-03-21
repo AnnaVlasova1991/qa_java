@@ -5,7 +5,8 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
+
 public class GetFoodTestAnimal {
     @Test
     public void shouldReturnTypeFoodAnimalGrace() throws Exception {
@@ -21,11 +22,11 @@ public class GetFoodTestAnimal {
         try {
             String animalKind = "Хомяк";
             List<String> actual = animal.getFood(animalKind);
+            fail("Expected Exception");
         }
         catch (Exception exception) {
             assertEquals( "Неизвестный вид животного, используйте значение Травоядное или Хищник", exception.getMessage());
         }
-
     }
     @Test
     public void getFamilyAnimalCorrect() {

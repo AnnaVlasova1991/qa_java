@@ -41,7 +41,7 @@ public class LionClassTest {
         assertEquals(expected, actual);
     }
     @Test
-    public void LionHasManeTest () throws Exception {
+    public void lionHasManeTest () throws Exception {
         Lion lion = new Lion ("Самец", new Feline());
         boolean actual = lion.hasMane;
         boolean expected = true;
